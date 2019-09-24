@@ -3,23 +3,21 @@ public class SalaryTable {
   
     public static void main(String[] args) {
      
-        int start=40000;
-        int increase;       
-        int finish;
+        int oldsalary;
         int raise=0;
-        
+        int newsalary=0;      
         //Headings
         System.out.format("%20s%20s%20s%20s\n","YEAR", "OLD SALARY", "RAISE", "NEW SALARY" );
         System.out.format("%20s%20s%20s%20s\n","----", "---------", "-----", "----------" );
         
-        for (int year = 1; year < 10; year++) {
-            System.out.format("%d%40d\n",year, start);
-           
-            increase = (int )(start * 0.03);
-            start+=increase;
-            raise= start-increase;
-            finish= start+increase;          
-            System.out.format("%20d%20d%20d%20d\n",year,start,increase,finish);
+        for (int year= 2; year < 10; year++) {
+            
+            oldsalary=40000;
+            raise= (int)(oldsalary * .03);
+            newsalary = oldsalary+raise;
+            
+            
+            System.out.format("%20d%20d%20d%20d\n",year,oldsalary,raise,newsalary);
             
        
         
